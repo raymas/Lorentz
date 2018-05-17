@@ -10,7 +10,7 @@ Required libraries :
 * **PyQtGraph** (optional)
 * **python-opengl** (optional, but necessary if PyQtGraph is selected)
 
-### Installing
+### Installing 
 
 Clone the repository
 ```
