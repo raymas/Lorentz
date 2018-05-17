@@ -13,10 +13,11 @@
 #
 # Lorentz attractor for python using euler forward method : x(n+1) = x(n) + dt * f(x(t),t)
 #
+import numpy as np
+
 try :
     import matplotlib as mpl
     from mpl_toolkits.mplot3d import Axes3D
-    import numpy as np
     import matplotlib.pyplot as plt
 except :
     print("matplotlib not present, checking PyQtGraph")

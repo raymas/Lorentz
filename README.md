@@ -6,6 +6,7 @@ A simple animated Lorentz system plot for python using matplotlib or PyQtGraph.
 
 ### Prerequisites
 Required libraries :
+* **numpy**
 * **matplotlib**
 * **PyQtGraph** (optional)
 * **python-opengl** (optional, but necessary if PyQtGraph is selected)
@@ -19,12 +20,12 @@ git clone https://github.com/raymas/Lorentz.git
 
 install dependencies (matplotlib only) :
 ```
-pip install matplotlib
+pip install matplotlib numpy
 ```
 
 PyQtGraph from http://pyqtgraph.org/ and :
 ```
-pip install pyside PyOpenGL
+pip install pyside PyOpenGL numpy
 ```
 ## Contributing
 
