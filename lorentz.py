@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 #
-# created by raymas : loretnz script v0.1
+# created by raymas : lorentz script v0.1
 #
 ######                ####### #     #
 #     # ###### #####  #        #   #  ######
