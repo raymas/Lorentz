@@ -76,8 +76,8 @@ class LorentzVisualizer(object):
     def __init__(self, initialValues=[1,1,1], coef=[28, 10, 8/3], maxstep=1):
         self.app = QtGui.QApplication(sys.argv)
         self.w = gl.GLViewWidget()
-        self.w.opts['distance'] = 100
-        self.w.setWindowTitle('Lorentz Attractor')
+        self.w.opts['distance'] = 200
+        self.w.setWindowTitle('Lorentz System')
         #self.w.setGeometry(0, 110, 1920, 1080)
         self.w.show()
 
@@ -107,11 +107,16 @@ class LorentzVisualizer(object):
         self.line = gl.GLLinePlotItem()
         self.w.addItem(self.line)
 
+        self.first = time.time()
+
     def start(self):
         if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
             QtGui.QApplication.instance().exec_()
 
     def update(self):
+        if time.time() - self.first < 2  :
+            return
+
         for i in range(self.maxstep) :
             self.lastValue = lorentzAttractor(20, 18, 8/3, self.lastValue[0], self.lastValue[1], self.lastValue[2])
             self.path.append(self.lastValue)
@@ -120,7 +125,7 @@ class LorentzVisualizer(object):
     def animation(self):
         timer = QtCore.QTimer()
         timer.timeout.connect(self.update)
-        timer.start(0.1)
+        timer.start(20)
         self.start()
 
 # ---------------------------------------------------------------------------------------------
