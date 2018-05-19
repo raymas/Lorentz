@@ -1,8 +1,9 @@
 # Lorentz system
 
 A simple animated Lorentz system plot for python using matplotlib or PyQtGraph.
+Using Euler forward method (from [wikipedia](https://en.wikipedia.org/wiki/Euler_method#Informal_geometrical_description)).
 
-matplotlib             |  PyQtGraph
+Matplotlib             |  PyQtGraph
 :-------------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/raymas/Lorentz/master/lorentz_attractor_matplotlib.svg?sanitize=true)  |  ![](https://raw.githubusercontent.com/raymas/Lorentz/master/lorentz_attractor_pyqtgraph.png)
 
