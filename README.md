@@ -2,6 +2,10 @@
 
 A simple animated Lorentz system plot for python using matplotlib or PyQtGraph.
 
+matplotlib             |  PyQtGraph
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/raymas/Lorentz/master/lorentz_attractor_matplotlib.svg?sanitize=true)  |  ![](https://raw.githubusercontent.com/raymas/Lorentz/master/lorentz_attractor_pyqtgraph.png)
+
 ## Getting Started
 
 ### Prerequisites
