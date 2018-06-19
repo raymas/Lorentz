@@ -15,6 +15,9 @@
 #
 import numpy as np
 
+
+engine_selection = "matplotlib" # or "pyqtgraph3D" or "pyqtgraph2D"
+
 try :
     import matplotlib as mpl
     from mpl_toolkits.mplot3d import Axes3D
@@ -23,14 +26,12 @@ try :
 except :
     print("matplotlib not present, checking PyQtGraph")
 
-bIspyqtgraphPresent = True
 try :
     from pyqtgraph.Qt import QtGui, QtCore
     import pyqtgraph as pg
     import pyqtgraph.opengl as gl
 except :
-    print("PyQtGraph is not present rollback to matplotlib...")
-    bIspyqtgraphPresent = False
+    print("PyQtGraph is not present")
 
 import time
 import sys
@@ -223,8 +224,11 @@ class Lorentz2DVisualizer(object):
 # ---------------------------------------------------------------------------------------------
 
 if __name__ == "__main__" :
-    if not bIspyqtgraphPresent :
+    if engine_selection == "pyqtgraph2D" :
         lorentzVisualizer = Lorentz2DVisualizer(coef=[10, 50, 8/3])
         lorentzVisualizer.animation()
-    else :
+    elif engine_selection == "matplotlib" :
         liveLorentzAttractorMatplotlib()
+    elif engine_selection == "pyqtgraph3D" :
+        lorentzVisualizer = Lorentz3DVisualizer(coef=[10, 50, 8/3])
+        lorentzVisualizer.animation()
